@@ -53,8 +53,8 @@ window.addEventListener('load', function() {
           dots = new O3D.Model({
             program: 'dots',
             render: function(gl, program, camera) {
-              //gl.lineWidth(this.lineWidth || 1);
-              gl.drawArrays(gl.POINTS, 0, this.dotsLength);
+              gl.lineWidth(1);
+              gl.drawArrays(gl.LINE_LOOP, 0, this.dotsLength);
               this.dynamic = true;
             }
           }),
